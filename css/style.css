@@ -26,17 +26,28 @@ body {
 
 .navigation {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+}
+
+.navigation-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 50%;
+
 }
 
 .navigation-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid black;
+	border: 2px solid rgb(31, 31, 31);
 	height: 175px;
 	width: 175px;
+	margin-top: 30px;
 	border-radius: 16px;
 	font-style: italic;
 	font-size: 30px;
@@ -44,10 +55,32 @@ body {
 	text-align: center;
 }
 
+@media screen and (max-width: 750px) {
+	.navigation {
+		justify-content: space-between;
+		margin: 30px auto;
+	}
+
+	.social-media {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 390px) {
+	.navigation {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
+	border-top: 2px solid rgb(31, 31, 31);
+    margin-top: 25px;
+    padding-top: 10px;
 }
 
 .gallery-row {
@@ -55,15 +88,21 @@ body {
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-between;
-	margin-bottom: 20px;
-	padding: 20px 0px;
+	align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+	.gallery-row {
+		justify-content: center;
+	}
 }
 
 .gallery-img {
+	margin-top: 20px;
 	display: flex;
 	justify-content: center;
 	align-self: center;
-	border: 2px solid black;
+	border: 2px solid rgb(31, 31, 31);
 	height: 300px;
 	width: 500px;
 	border-radius: 16px;
